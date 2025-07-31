@@ -1,0 +1,43 @@
+h1 {
+    padding: auto;
+    padding-bottom:0%;
+    margin-bottom: 0%;
+    font-size: 75px;
+    background-color: maroon;
+    color: antiquewhite
+}
+
+#links {
+    display: flex;
+   flex-direction: row-reverse;
+   justify-content: end;
+    font-size: 25px;
+    background-color: antiquewhite;
+    color:  rgb(81, 38, 7);
+}
+
+#Entwickler {
+    padding-right: 20px;
+}
+
+#why {
+    border-radius: 20px;
+    color: rgb(81, 38, 7);
+    background-color: antiquewhite;
+    font-size: 25px;
+    padding: auto;
+    display: flex;
+   flex-direction: row-reverse;
+   justify-content: center;
+}
+
+#logindaten {
+    font-size: 20px;
+    display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+#Username {
+    font-size: 25px;
+}
