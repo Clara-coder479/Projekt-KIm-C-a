@@ -14,19 +14,13 @@
 />
 </head>
 <body>
-    <h1>Wordyl</h1>
+    <h1>Wordle</h1>
 
-<<<<<<< HEAD
   <div id="links">    
     <a id="Quiz" href="ProjektKC.html">Quiz</a> 
     <a id="Entwickler" href="Entwickler.html">Über die Entwickler</a>
     <a id="Wordle" href="wordle.html">Wordle</a>
     <a id="Home" href="home.html">Home</a>
-=======
-  <div id="links">
-    <a id="Start" href="http://127.0.0.1:5501/index.html?">Start</a> 
-    <a id="Entwickler" href="http://127.0.0.1:5501/Entwickler.html">Über die Entwickler</a>
->>>>>>> 577c31f2d75c061ce57f559815ba5fbcab899c1b
     <br> 
   </div>
     
@@ -49,8 +43,7 @@
   <p id="message"></p>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Check if a username is already saved and display it
+    document.addEventListener('DOMContentLoaded', () => { 
       const savedUsername = localStorage.getItem('username');
       const message = document.getElementById('message');
 
@@ -58,18 +51,18 @@
         message.textContent = `Welcome back, ${savedUsername}!`;
       }
 
-      // Form submission handler
+    
       const form = document.getElementById('usernameForm');
       form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form from refreshing the page
 
-        // Get the entered username
+        
         const usernameInput = document.getElementById('username').value;
 
-        // Save the username in localStorage
+        
         localStorage.setItem('username', usernameInput);
 
-        // Display a message
+        
         message.textContent = `Username saved: ${usernameInput}`;
       });
     });
@@ -98,20 +91,22 @@
 
   <form>
     <h4 class="question">Haben Sie viel Langeweile am Tag?</h4>
-    <input type="radio" id="langeweilemax" name="Langweile" value="Mein Tag ist todes langweilig" class="answers">
+    <input type="radio" id="langeweilemax" name="Langeweile" value="Mein Tag ist todes langweilig" class="answers">
   <label for="langeweilemax">Mein Tag ist todes langweilig</label><br>
   <input type="radio" id="normal" name="Langeweile" value="Bin selten gelangweilt" class="answers">
   <label for="nromal">Bin selten gelangweilt</label><br>
-  <input type="radio" id="" name="Alltag" value="Nein" class="answers">
-  <label for="leicht">Nein</label><br><br>
+  <input type="radio" id="" name="Langeweile" value="Nein" class="answers">
+  <label for="leicht">Nein</label>
+  <br>
+  <br>
 
   <button type="submit" id="Auswerten">Auswerten</button>
 
   <script>
   document.getElementById("Auswerten").addEventListener("click", function (event) {
-    event.preventDefault(); // Verhindert das Neuladen der Seite
+    event.preventDefault(); 
 
-    // Antworten auslesen
+    
     const alltag = document.querySelector('input[name="Alltag"]:checked');
     const raetsel = document.querySelector('input[name="Rätsel"]:checked');
     const langeweile = document.querySelector('input[name="Langeweile"]:checked');
@@ -126,7 +121,7 @@
     const antwortRaetsel = raetsel.value;
     const antwortLangeweile = langeweile.value;
 
-    // Auswertung (hier kannst du Logik einbauen)
+    
     let ausgabe = "Ihre Antworten:\n";
     ausgabe += `Konzentration im Alltag: ${antwortAlltag}\n`;
     ausgabe += `Rätsel: ${antwortRaetsel}\n`;
@@ -137,11 +132,18 @@
       ausgabe += "\nTipp: Vielleicht könnten Rätsel helfen, Ihren Alltag interessanter zu gestalten!";
     }
 
-    if (antwortAlltag !== "Nein" && antwortLangeweile !== "Nein") {
-      ausgabe += "\nTipp: Vielleicht könnten Rätsel helfen, Ihren Alltag interessanter zu gestalten!";
+    if (antwortAlltag == "Nein" && antwortLangeweile == "Nein") {
+      ausgabe += "\nTipp:  Scheint als hätten Sie schon genug im Alltag zu tun und Sie können unser Wordle ab und zu zum runterkommen spielen!";
     }
 
-    // Ergebnisse anzeigen
+    if (antwortAlltag !== "Nein" && antwortLangeweile == "Nein") {
+      ausgabe += "\nTipp:  Damit Sie sich besser konzentrieren können, spielen Sie täglich unser Wordle";
+    } 
+
+    if (antwortAlltag == "Nein" && antwortLangeweile !== "Nein") {
+      ausgabe += "\nTipp: Unser Worlde können Sie spielen, um eine große Menge Spaß zu haben";
+        }
+    
     alert(ausgabe);
   });
 </script>
