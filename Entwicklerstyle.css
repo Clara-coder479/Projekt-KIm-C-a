@@ -1,27 +1,54 @@
 h1 {
+    margin-top: 0px;
+    padding-bottom:0%;
     padding: auto;
     padding-bottom:0%;
     margin-bottom: 0%;
     font-size: 75px;
+    font-family: 'Trebuchet MS', sans-serif;
     background-color: #800000;
     color: #faebd7
 }
 
 #links {
+    padding-top: 5px;
+  padding-bottom: 5px;
     display: flex;
    flex-direction: row-reverse;
    justify-content: end;
     font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
     background-color: antiquewhite;
     color:  rgb(81, 38, 7);
 }
 
+#Quiz {
+   padding-right: 20px;
+   color:  rgb(81, 38, 7);
+   font-family: 'Trebuchet MS', sans-serif;
+}
+
+#Wordle  {
+   padding-right: 20px;
+   color:  rgb(81, 38, 7);
+   font-family: 'Trebuchet MS', sans-serif;
+}
+
+#Home  {
+   padding-right: 20px;
+   color:  rgb(81, 38, 7);
+   font-family: 'Trebuchet MS', sans-serif;
+}
+
 #Entwickler {
     padding-right: 20px;
+    color:  rgb(81, 38, 7);
+   font-family: 'Trebuchet MS', sans-serif;
 }
 
 #kim {
     font-size: 35px;
+    font-family: 'Trebuchet MS', sans-serif;
     margin-left: 10%;
    margin-right: 10%;
    background-color: #800000;
@@ -44,18 +71,24 @@ h1 {
 
 #kiminfo {
     font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: rgb(81, 38, 7);
     padding-left: 30px;
 }
 
 .bulletkim {
     font-size: 25px;
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', sans-serif;
     padding-left: 30px;
+     color: rgb(81, 38, 7);
 }
 
 #instakim {
     color: antiquewhite;
     background-color: rgb(81, 38, 7) ;
     font-size: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
     display: flex;
     justify-content: center;
     border-radius: 10px;
@@ -65,6 +98,7 @@ h1 {
 
 #nameclara{
     font-size: 35px;
+    font-family: 'Trebuchet MS', sans-serif;
     margin-left: 10%;
    margin-right: 10%;
    background-color: #800000;
@@ -87,11 +121,13 @@ h1 {
 
 #clarainfo {
     font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
     padding-left: 30px;
 }
 
 .bulletclara {
     font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
     padding-left: 30px;
 }
 
@@ -99,6 +135,7 @@ h1 {
     color: antiquewhite;
     background-color: rgb(81, 38, 7) ;
     font-size: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
     display: flex;
     justify-content: center;
     border-radius: 10px;
