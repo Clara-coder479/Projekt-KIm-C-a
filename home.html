@@ -26,4 +26,26 @@ background: radial-gradient(circle, rgba(136, 0, 0, 1) 21%, rgba(250, 235, 215, 
     <br> 
   </div>
 
+<button onclick="myFunction()">Abonnieren</button>
+
+
+ <script>
+    function myFunction() {
+      let eingabe = prompt("3 zusätzliche Wordles täglich für nur 50€*                 *monatlich", "e-mail eingeben: ");
+      
+
+      if (eingabe !== null) {
+        alert("Danke für dein Abo! ");
+      } else {
+        alert("Du bist ein schlechter Mensch!");
+      }
+        document.getElementById("demo").innerHTML = text;
+    }
+
+
+  </script>
+
+<a id="start" href="wordle.html">Log in</a>
+<a id="start" href="wordle.html">Spielen</a>
+
 </body>
