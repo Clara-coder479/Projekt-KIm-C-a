@@ -17,10 +17,10 @@
     <h1>Wordyl</h1>
 
   <div id="links">
-    <a id="Quiz" href="ProjektKC.html">Start</a> 
+    <a id="Quiz" href="ProjektKC.html">Quiz</a> 
     <a id="Entwickler" href="Entwickler.html">Über die Entwickler</a>
-    <a id="Wordle" href="wordle.html">Über die Entwickler</a>
-    <a id="Home" href="home.html">Über die Entwickler</a>
+    <a id="Wordle" href="wordle.html">Wordle</a>
+    <a id="Home" href="home.html">Home</a>
     
     <br> 
   </div>
@@ -73,11 +73,11 @@
 <title>Prompt nach 5 Sekunden</title>
   <script>
     function zeigePrompt() {
-      let eingabe = prompt("3 zusätzliche Wordles täglich für nur 50€*                 *monatlich");
+      let eingabe = prompt("3 zusätzliche Wordles täglich für nur 50€*                 *monatlich", "e-mail eingeben: ");
       
 
       if (eingabe !== null) {
-        alert("Danke für dein Abo! " + eingabe);
+        alert("Danke für dein Abo! ");
       } else {
         alert("Du bist ein schlechter Mensch!");
       }
