@@ -1,4 +1,10 @@
-
+#f {
+    margin-top: 0px;
+    padding-bottom:0%;
+    margin-bottom: 0%;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
 
 h1 {
     margin-top: 0px;
@@ -190,7 +196,6 @@ aside {
   cursor: pointer;
   text-transform: uppercase;
 }
-
 
 
 

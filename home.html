@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Entwicklerstyle.css">
+    <link rel="stylesheet" href="ProjektKC.css">
     <title>Document</title>
 </head>
 
@@ -16,7 +16,7 @@ background: radial-gradient(circle, rgba(136, 0, 0, 1) 21%, rgba(250, 235, 215, 
 
 <body>
 
-    <h1>Wordyl</h1>
+    <h1>Wordle</h1>
 
   <div id="links">
     <a id="Quiz" href="ProjektKC.html">Quiz</a> 
@@ -25,6 +25,8 @@ background: radial-gradient(circle, rgba(136, 0, 0, 1) 21%, rgba(250, 235, 215, 
     <a id="Home" href="home.html">Home</a>
     <br> 
   </div>
+
+<h2 id="f">Wordle</h2>
 
 <button onclick="myFunction()">Abonnieren</button>
 
@@ -45,7 +47,23 @@ background: radial-gradient(circle, rgba(136, 0, 0, 1) 21%, rgba(250, 235, 215, 
 
   </script>
 
-<a id="start" href="wordle.html">Log in</a>
+<button onclick="myFunction()">Log in</button>
+
+
+ <script>
+    function myFunction() {
+      let eingabe = prompt("username eingeben: ");
+      
+
+      if (eingabe !== null) {
+        alert("Du bist angemeldet");
+      } else {
+        alert("Log in abgebrochen");
+      }
+        document.getElementById("username").innerHTML = text;
+    }
+ </script>
+
 <a id="start" href="wordle.html">Spielen</a>
 
 </body>
