@@ -2,20 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ProjektKC.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Wordle</title>
-    <link rel="stylesheet" href="style1.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-    
+  
+/>
 </head>
 <body>
+    <h1>Wordyl</h1>
+
+  <div id="links">
+    <a id="Quiz" href="ProjektKC.html">Start</a> 
+    <a id="Entwickler" href="Entwickler.html">Über die Entwickler</a>
+    <a id="Wordle" href="wordle.html">Über die Entwickler</a>
+    <a id="Home" href="home.html">Über die Entwickler</a>
     
-  <title>Prompt nach 5 Sekunden</title>
+    <br> 
+  </div>
+    
+  <section>
+    <p id="why">
+    Es ist wichtig sein Gehirn pro Tag mindestens 15min zu trainieren.<br>
+    Ein weiteres Trainieren des Gehirnes sorgt für schneller Reaktionszeiten und räumlicheres Denken.<br>
+    Mit unserem Wordyl wird ihr Training in ein spaßiges Erlebnis umgestaltet.<br>
+    Haben Sie Spaß mit unsersem kurzem täglichen Wörter-Rätsel.
+    </p>
+  </section>
+
+  <h2 id="Username">Enter Your Username</h2>
+  <form id="usernameForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Save</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if a username is already saved and display it
+      const savedUsername = localStorage.getItem('username');
+      const message = document.getElementById('message');
+
+      if (savedUsername) {
+        message.textContent = `Welcome back, ${savedUsername}!`;
+      }
+
+      // Form submission handler
+      const form = document.getElementById('usernameForm');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+
+        // Get the entered username
+        const usernameInput = document.getElementById('username').value;
+
+        // Save the username in localStorage
+        localStorage.setItem('username', usernameInput);
+
+        // Display a message
+        message.textContent = `Username saved: ${usernameInput}`;
+      });
+    });
+  </script>
+
+<title>Prompt nach 5 Sekunden</title>
   <script>
     function zeigePrompt() {
       let eingabe = prompt("3 zusätzliche Wordles täglich für nur 50€*                 *monatlich");
@@ -84,5 +139,13 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="script.js" type="module"></script>
+<style>
+  body {
+    background: #FAEBD7;
+background: radial-gradient(circle,rgba(250, 235, 215, 1) 0%, rgba(136, 0, 0, 1) 100%);
+  }
+</style>
+
+
 </body>
 </html>
