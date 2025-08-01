@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ProjektKC.css">
+    
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Wordyl</h1>
+
+  <div id="links">
+    <a id="Start" href="http://127.0.0.1:5501/index.html?">Start</a> 
+    <a id="Entwickler" href="http://127.0.0.1:5501/Entwickler.html">Über die Entwickler</a>
+    <br> 
+  </div>
+    
+  <section>
+    <p id="why">
+    Es ist wichtig sein Gehirn pro Tag mindestens 15min zu trainieren.<br>
+    Ein weiteres Trainieren des Gehirnes sorgt für schneller Reaktionszeiten und räumlicheres Denken.<br>
+    Mit unserem Wordyl wird ihr Training in ein spaßiges Erlebnis umgestaltet.<br>
+    Haben Sie Spaß mit unsersem kurzem täglichen Wörter-Rätsel.
+    </p>
+  </section>
+
+  <h2 id="Username">Enter Your Username</h2>
+  <form id="usernameForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Save</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if a username is already saved and display it
+      const savedUsername = localStorage.getItem('username');
+      const message = document.getElementById('message');
+
+      if (savedUsername) {
+        message.textContent = `Welcome back, ${savedUsername}!`;
+      }
+
+      // Form submission handler
+      const form = document.getElementById('usernameForm');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+
+        // Get the entered username
+        const usernameInput = document.getElementById('username').value;
+
+        // Save the username in localStorage
+        localStorage.setItem('username', usernameInput);
+
+        // Display a message
+        message.textContent = `Username saved: ${usernameInput}`;
+      });
+    });
+  </script>
+
+<aside>
+  <form>
+    <h4 class="question">Haben Sie Schwierigkeiten sich im Alltag zu konzentrieren?</h4>
+    <input type="radio" id="schwierig" name="Alltag" value="Ja sehr" class="answers">
+  <label for="schwierig">Ja sehr</label><br>
+  <input type="radio" id="mittel" name="Alltag" value="Manchmal" class="answers">
+  <label for="mittel">Manchmal</label><br>
+  <input type="radio" id="leich" name="Alltag" value="Nein" class="answers">
+  <label for="leicht">Nein</label><br><br>
+  </form>
+
+  <form>
+    <h4 class="question">Mögen Sie Rätsel?</h4>
+    <input type="radio" id="Rätselyay" name="Rätsel" value="Ja" class="answers">
+  <label for="Rätselyay">Ja</label><br>
+  <input type="radio" id="Rätselmeh" name="Rätsel" value="Meh" class="answers">
+  <label for="Rätselmeh">Meh</label><br>
+  <input type="radio" id="Rätselnope" name="Rätsel" value="Die Dinger sind schrott" class="answers">
+  <label for="Rätselnope">Die Dinger sind schrott</label><br><br>
+  </form>
+
+  <form>
+    <h4 class="question">Haben Sie viel Langeweile am Tag?</h4>
+    <input type="radio" id="langeweilemax" name="Langweile" value="Mein Tag ist todes langweilig" class="answers">
+  <label for="langeweilemax">Mein Tag ist todes langweilig</label><br>
+  <input type="radio" id="normal" name="Langeweile" value="Bin selten gelangweilt" class="answers">
+  <label for="nromal">Bin selten gelangweilt</label><br>
+  <input type="radio" id="" name="Alltag" value="Nein" class="answers">
+  <label for="leicht">Nein</label><br><br>
+
+  <button type="submit" id="Auswerten">Auswerten</button>
+
+  <script>
+  document.getElementById("Auswerten").addEventListener("click", function (event) {
+    event.preventDefault(); // Verhindert das Neuladen der Seite
+
+    // Antworten auslesen
+    const alltag = document.querySelector('input[name="Alltag"]:checked');
+    const raetsel = document.querySelector('input[name="Rätsel"]:checked');
+    const langeweile = document.querySelector('input[name="Langeweile"]:checked');
+
+
+    if (!alltag || !raetsel || !langeweile) {
+      alert("Bitte beantworten Sie alle Fragen.");
+      return;
+    }
+
+    const antwortAlltag = alltag.value;
+    const antwortRaetsel = raetsel.value;
+    const antwortLangeweile = langeweile.value;
+
+    // Auswertung (hier kannst du Logik einbauen)
+    let ausgabe = "Ihre Antworten:\n";
+    ausgabe += `Konzentration im Alltag: ${antwortAlltag}\n`;
+    ausgabe += `Rätsel: ${antwortRaetsel}\n`;
+    ausgabe += `Langeweile: ${antwortLangeweile}\n`;
+
+    
+    if (antwortAlltag !== "Nein" && antwortLangeweile !== "Nein" ) {
+      ausgabe += "\nTipp: Vielleicht könnten Rätsel helfen, Ihren Alltag interessanter zu gestalten!";
+    }
+
+    if (antwortAlltag !== "Nein" && antwortLangeweile !== "Nein") {
+      ausgabe += "\nTipp: Vielleicht könnten Rätsel helfen, Ihren Alltag interessanter zu gestalten!";
+    }
+
+    // Ergebnisse anzeigen
+    alert(ausgabe);
+  });
+</script>
+  </form>
+</aside>
+
+<style>
+  body {
+    background: #FAEBD7;
+background: radial-gradient(circle,rgba(250, 235, 215, 1) 0%, rgba(136, 0, 0, 1) 100%);
+  }
+</style>
+
+
+</body>
+</html>

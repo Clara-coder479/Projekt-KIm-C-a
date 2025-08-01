@@ -1,0 +1,107 @@
+h1 {
+    padding: auto;
+    padding-bottom:0%;
+    margin-bottom: 0%;
+    font-size: 75px;
+    background-color: #800000;
+    color: #faebd7
+}
+
+#links {
+    display: flex;
+   flex-direction: row-reverse;
+   justify-content: end;
+    font-size: 25px;
+    background-color: antiquewhite;
+    color:  rgb(81, 38, 7);
+}
+
+#Entwickler {
+    padding-right: 20px;
+}
+
+#kim {
+    font-size: 35px;
+    margin-left: 10%;
+   margin-right: 10%;
+   background-color: #800000;
+   border: 23px maroon solid;
+    border-radius: 20px;
+    color: antiquewhite;
+}
+
+#bildkim {
+    border: 23px antiquewhite solid;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    color: rgb(81, 38, 7);
+    display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+#kiminfo {
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+.bulletkim {
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+#instakim {
+    color: antiquewhite;
+    background-color: rgb(81, 38, 7) ;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#nameclara{
+    font-size: 35px;
+    margin-left: 10%;
+   margin-right: 10%;
+   background-color: #800000;
+   border: 23px maroon solid;
+    border-radius: 20px;
+    color: antiquewhite;
+}
+
+#clara {
+    border: 23px antiquewhite solid;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    color: rgb(81, 38, 7);
+    display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+#clarainfo {
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+.bulletclara {
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+#instaclara {
+    color: antiquewhite;
+    background-color: rgb(81, 38, 7) ;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
